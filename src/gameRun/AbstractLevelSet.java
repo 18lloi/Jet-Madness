@@ -9,11 +9,9 @@ public abstract class AbstractLevelSet {
 
 	public abstract void init(); // initialize variables
 
-	public abstract void update(); // continuous loop that updates non-grahical
-									// elements
+	public abstract void update(); // continuous loop that updates non-grahical elements
 
-	public abstract void draw(Graphics2D g); // continuous loop that updates
-												// grahical elements
+	public abstract void draw(Graphics2D g); // continuous loop that updates grahical elements
 
 	public abstract void keyPressed(int k); // user input
 
