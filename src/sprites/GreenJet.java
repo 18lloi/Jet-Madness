@@ -27,7 +27,7 @@ public class GreenJet extends EnemyJet {
 		// set stats - high health, high damage
 		maxHP = 120;
 		HP = maxHP;
-		damage = 55;
+		damage = 15;
 		
 		// set stats - high health, low damage
 //		maxHP = 80;

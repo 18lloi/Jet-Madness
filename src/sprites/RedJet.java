@@ -25,7 +25,7 @@ public class RedJet extends EnemyJet {
 		super(map);
 		
 		// set stats - basic enemy jet
-		maxHP = 50;
+		maxHP = 60;
 		HP = maxHP;
 		damage = 20;
 

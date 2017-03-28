@@ -36,6 +36,7 @@ public class TransitionScreen extends AbstractLevelSet {
 		this.lm = lm;
 		this.score = score;
 		init();
+		
 	}
 	
 	// initializes variables
