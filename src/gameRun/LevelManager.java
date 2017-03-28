@@ -14,15 +14,15 @@ public class LevelManager {
 	public static int previousLevel; // used to go to previous level
 
 	// list of levels assigned integer
-	public static final int NUMBEROFLEVELS = 8;
+	public static final int NUMBEROFLEVELS = 9;
 	public static final int MENU = 0;
 	public static final int LEVEL1 = 1;
 	public static final int LEVEL2 = 2;
 	public static final int LEVEL3 = 3;
 	public static final int LEVEL4 = 4;
 	public static final int LEVEL5 = 5;
-	public static final int GAMEOVER = 6;
-	public static final int CONGRATULATION = 7;
+	public static final int CONGRATULATION = 6;
+	public static final int GAMEOVER = 7;
 	public static final int TRANSITION = 8;
 
 	public LevelManager() {

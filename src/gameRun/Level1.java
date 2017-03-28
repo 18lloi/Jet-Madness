@@ -297,8 +297,7 @@ public class Level1 extends AbstractLevelSet {
 		}
 		
 
-		// actions after player dies - asks a question for player to earn some
-		// points
+		// actions after player dies - asks a question for player to earn some points
 		if (p.getDeath()) {
 			if (p.getLives() == 1) {
 				clip.stop();
@@ -311,20 +310,20 @@ public class Level1 extends AbstractLevelSet {
 				p.setPosition(Panel.WIDTH / 2, Panel.HEIGHT - 100);
 			}
 		}
-
-		// goes to level 2 if question is answered
+		
+		// goes to transition screen if question is answered
 		if (endLevelQuestion) {
 			try {
-				Thread.sleep(1000);
+				Thread.sleep(500);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
 			lm.setScore(p.getLives() * 100);
 			lm.setLives(p.getLives());
 			clip.stop();
-			lm.setLevel(LevelManager.LEVEL2);
+			lm.setLevel(LevelManager.TRANSITION);
 		}
-		
+
 		// asks final question if every enemy is dead
 		if (enemyCount == totalEnemyCount) {
 			Random r = new Random();

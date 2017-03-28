@@ -21,7 +21,7 @@ public class TransitionScreen extends AbstractLevelSet {
 	Clip clip; // Audio clip for victory
 	
 	private boolean isSelected = false; // true if player pressed ENTER
-	private String[] options = { "Continue to the offense", "Submit Score and return to main menu", "Main Menu", "Quit" }; // array of options
+	private String[] options = { "Continue", "Submit Score and return to main menu", "Main Menu", "Quit" }; // array of options
 	private int currentChoice = 0; // player's current cursor choice
 	private int no = 0; // used in displaying loading screen
 	private String username; // name that user gives in beginning of game
@@ -69,7 +69,7 @@ public class TransitionScreen extends AbstractLevelSet {
 			isSelected = false;
 			if (currentChoice == 0) { // continue to attacking enemy
 				clip.stop();
-				lm.setLevel(LevelManager.LEVEL4);
+				lm.setLevel(LevelManager.previousLevel + 1);
 			} else if (currentChoice == 1) { // submit score to leaderboard and bring back to menu
 				try {
 					Writer output = null;
@@ -106,7 +106,7 @@ public class TransitionScreen extends AbstractLevelSet {
 			} else {
 				g.setColor(Color.WHITE);
 			}
-			g.drawString(options[i], 120, 360 + i * 30);
+			g.drawString(options[i], 120, 240 + i * 30);
 		}
 		
 		// draws loading screen
