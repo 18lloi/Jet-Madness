@@ -57,7 +57,7 @@ public class Player extends AbstractSpriteSet {
 		HP = maxHP;
 //		lives = 3;
 		bulletSpeed = 8.8;
-		bulletDamage = 10;
+		bulletDamage = 150;
 		gunSpeed = 100;
 		
 		// initializes movement and collision stats
