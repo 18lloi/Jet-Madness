@@ -317,7 +317,7 @@ public class Level3 extends AbstractLevelSet {
 			}
 		}
 
-		// goes to transition screen if question is answered
+		// goes to transition screen if question is answered correctly
 		if (endLevelQuestion) {
 			try {
 				Thread.sleep(500);
