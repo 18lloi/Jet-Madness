@@ -23,6 +23,7 @@ public class LevelManager {
 	public static final int LEVEL5 = 5;
 	public static final int GAMEOVER = 6;
 	public static final int CONGRATULATION = 7;
+	public static final int TRANSITION = 8;
 
 	public LevelManager() {
 
@@ -54,11 +55,14 @@ public class LevelManager {
 		if (state == LEVEL5) {
 			levels[state] = new Level5(this);
 		}
-		if(state == GAMEOVER){
+		if (state == GAMEOVER){
 			levels[state] = new GameOver(this, username, score); 
 		}
-		if(state == CONGRATULATION){
+		if (state == CONGRATULATION){
 			levels[state] = new GameBeat(this, username, score); 
+		}
+		if (state == TRANSITION) {
+			levels[state] = new TransitionScreen(this, username, score);
 		}
 	}
 
