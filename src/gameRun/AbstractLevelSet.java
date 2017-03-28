@@ -16,8 +16,5 @@ public abstract class AbstractLevelSet {
 	public abstract void keyPressed(int k); // user input
 
 	public abstract void keyReleased(int k); // stops user input
-	
-	
-	4567uht678iuhty78i
 
 }

@@ -315,16 +315,17 @@ public class Level4 extends AbstractLevelSet {
 			}
 		}
 
-		// goes to level 5 if question is answered
+		// goes to transition screen if question is answered
 		if (endLevelQuestion) {
 			try {
-				Thread.sleep(1000);
+				Thread.sleep(500);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}
 			lm.setScore(p.getLives() * 100);
+			lm.setLives(p.getLives());
 			clip.stop();
-			lm.setLevel(LevelManager.LEVEL5);
+			lm.setLevel(LevelManager.TRANSITION);
 		}
 
 		// asks final question if every enemy is dead
