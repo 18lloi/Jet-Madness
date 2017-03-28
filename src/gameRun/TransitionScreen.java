@@ -25,7 +25,7 @@ public class TransitionScreen extends AbstractLevelSet {
 	private int currentChoice = 0; // player's current cursor choice
 	private int no = 0; // used in displaying loading screen
 	private String username; // name that user gives in beginning of game
-	private int score; // score that user has acheived
+	private int score; // score that user has achieved
 	
 	// Color
 	private final Color BRIGHTYELLOW = new Color(255, 255, 102);
@@ -93,7 +93,7 @@ public class TransitionScreen extends AbstractLevelSet {
 		
 	}
 
-	// updates grahical continous Thread
+	// updates graphical continuous Thread
 	public void draw(Graphics2D g) {
 		
 		// draws background
