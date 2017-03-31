@@ -1,7 +1,7 @@
 package sprites;
 
 import java.awt.Graphics2D;
-import java.awt.MouseInfo;
+//import java.awt.MouseInfo;
 import java.awt.image.BufferedImage;
 import java.util.*;
 
@@ -59,7 +59,7 @@ public class Player extends AbstractSpriteSet {
 		bulletSpeed = 8.8;
 		bulletDamage = 15;
 
-		bulletDamage = 150;
+//		bulletDamage = 150;
 
 		gunSpeed = 100;
 		

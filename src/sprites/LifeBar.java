@@ -34,9 +34,7 @@ public class LifeBar {
 	public void draw(Graphics2D g) {
 		// draw lifeBar and hearts
 		g.drawImage(bar, 0, 10, null);
-		for (int i = 0; i < p.getLives(); i++) {
-			g.drawImage(heart, 180 + 50 * i, 16, null);
-		}
+		g.drawImage(heart, 180, 16, null);
 		
 		// set graphics
 		g.setFont(font);
@@ -44,6 +42,9 @@ public class LifeBar {
 		
 		// draw current health / total health
 		g.drawString(p.getHP() + "/" + p.getMaxHP(), 35, 35);
+		
+		// draw number of lives
+		g.drawString("X  " + p.getLives(), 220, 35);
 	}
 	
 }
