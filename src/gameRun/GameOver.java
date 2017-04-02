@@ -107,7 +107,7 @@ public class GameOver extends AbstractLevelSet {
 		}
 		
 		// helpful hint
-		g.drawString("Make sure to look for the extra life in each level!", 95, 300);
+		g.drawString("Failure is not an option soldier, your nation still needs you out there!", 20, 300);
 		
 		// draw loading
 		if (isSelected) {
