@@ -401,7 +401,7 @@ public class Level1 extends AbstractLevelSet {
 	// all the user input options here for level 1
 	public void keyPressed(int k) {
 		if (k == KeyEvent.VK_SPACE) {
-			System.out.println("HI");
+//			System.out.println("HI");
 		}
 
 		switch (k) {
@@ -421,6 +421,10 @@ public class Level1 extends AbstractLevelSet {
 			p.setDown(true);
 			break;
 		case KeyEvent.VK_P:
+			pause.setPause(true);
+			pausedTime = currentTime;
+			break;
+		case KeyEvent.VK_ESCAPE:
 			pause.setPause(true);
 			pausedTime = currentTime;
 			break;

@@ -428,6 +428,10 @@ public class Level2 extends AbstractLevelSet {
 			pause.setPause(true);
 			pausedTime = currentTime;
 			break;
+		case KeyEvent.VK_ESCAPE:
+			pause.setPause(true);
+			pausedTime = currentTime;
+			break;
 		case KeyEvent.VK_1:
 			currentChoice = 1;
 			isSelected = true;
