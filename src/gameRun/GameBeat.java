@@ -21,7 +21,7 @@ public class GameBeat extends AbstractLevelSet {
 	Clip clip; // Audio clip for victory
 	
 	private boolean isSelected = false; // true if player pressed ENTER
-	private String[] options = { "Continue to the offense", "Submit Score and return to main menu", "Main Menu", "Quit" }; // array of options
+	private String[] options = { "Submit Score and return to main menu", "Main Menu", "Quit" }; // array of options
 	private int currentChoice = 0; // player's current cursor choice
 	private int no = 0; // used in displaying loading screen
 	private String username; // name that user gives in beginning of game
@@ -67,10 +67,7 @@ public class GameBeat extends AbstractLevelSet {
 		if (isSelected && no == 1) {
 			no = 0;
 			isSelected = false;
-			if (currentChoice == 0) { // continue to attacking enemy
-				clip.stop();
-				lm.setLevel(LevelManager.LEVEL4);
-			} else if (currentChoice == 1) { // submit score to leaderboard and bring back to menu
+			if (currentChoice == 0) { // submit score to leaderboard and bring back to menu
 				try {
 					Writer output = null;
 					File file = new File("res/educationDatabase/leaderboard");
@@ -83,10 +80,10 @@ public class GameBeat extends AbstractLevelSet {
 				}
 				clip.stop(); // stop current music
 				lm.setLevel(LevelManager.MENU);
-			} else if (currentChoice == 2) { // go back to menu
+			} else if (currentChoice == 1) { // go back to menu
 				clip.stop(); // stop current music
 				lm.setLevel(LevelManager.MENU);
-			} else if (currentChoice == 3) { // close game
+			} else if (currentChoice == 2) { // close game
 				System.exit(0);
 			}
 		}
