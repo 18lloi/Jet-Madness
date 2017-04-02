@@ -17,9 +17,9 @@ public class LevelManager {
 	public static final int NUMBEROFLEVELS = 9;
 	public static final int MENU = 0;
 	public static final int LEVEL1 = 1;
-	public static final int LEVEL2 = 2;
-	public static final int LEVEL3 = 3;
-	public static final int LEVEL4 = 4;
+//	public static final int LEVEL2 = 2;
+//	public static final int LEVEL3 = 3;
+	public static final int LEVEL4 = 2;
 	public static final int LEVEL5 = 5;
 	public static final int CONGRATULATION = 6;
 	public static final int GAMEOVER = 7;
@@ -43,12 +43,12 @@ public class LevelManager {
 		if (state == LEVEL1) {
 			levels[state] = new Level1(this);
 		}
-		if(state == LEVEL2){
-			levels[state] = new Level2(this); 
-		}
-		if (state == LEVEL3) {
-			levels[state] = new Level3(this);
-		}
+//		if(state == LEVEL2){
+//			levels[state] = new Level2(this); 
+//		}
+//		if (state == LEVEL3) {
+//			levels[state] = new Level3(this);
+//		}
 		if (state == LEVEL4) {
 			levels[state] = new Level4(this);
 		}

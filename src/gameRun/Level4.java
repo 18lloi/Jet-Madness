@@ -97,7 +97,7 @@ public class Level4 extends AbstractLevelSet {
 		killCount = 0;
 		enemyCount = 0;
 		p = new Player(map);
-		p.setLives(p.getLives());
+		p.setLives(lm.getLives());
 		p.setPosition(Panel.WIDTH / 2, Panel.HEIGHT - 100);
 
 		// create life bar at top left corner
