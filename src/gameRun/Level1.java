@@ -95,7 +95,7 @@ public class Level1 extends AbstractLevelSet {
 		enemyCount = 0;
 		p = new Player(map);
 		p.setPosition(Panel.WIDTH / 2, Panel.HEIGHT - 100);
-		p.setLives(1); // 3 lives
+		p.setLives(3); // 3 lives
 
 		// create life bar at top left corner
 		lb = new LifeBar(p);
