@@ -19,7 +19,7 @@ public class LevelManager {
 	public static final int LEVEL1 = 1;
 	public static final int LEVEL2 = 2;
 	public static final int LEVEL3 = 3;
-	public static final int LEVEL4 = 2;
+	public static final int LEVEL4 = 4;
 	public static final int LEVEL5 = 5;
 	public static final int CONGRATULATION = 6;
 	public static final int GAMEOVER = 7;
