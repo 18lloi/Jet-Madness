@@ -45,8 +45,7 @@ public class Menu extends AbstractLevelSet {
 			"answering correctly awards you 50. Answering a question after using a",
 			"hint will award 25 points. At the end of each level, you are awarded 100",
 			"points per life remaining. The three lives that are given at the beginning",
-			"are all that you get. Killing an enemy earns you 25 points. Killing the",
-			"boss awards 200 points.",
+			"are all that you get. Killing an enemy earns you 25 points.",
 			"Best of luck soldier."
 			};
 	private String[] optionButtons = { "Toggle Mute", "Back", "Quit" };
