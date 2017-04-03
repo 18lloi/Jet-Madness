@@ -53,7 +53,7 @@ public class Player extends AbstractSpriteSet {
 		super(map);
 		
 		// initializes playing stats
-		maxHP = 1;
+		maxHP = 100;
 		HP = maxHP;
 //		lives = 3;
 		bulletSpeed = 8.8;
