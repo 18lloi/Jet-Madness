@@ -30,7 +30,7 @@ public class Menu extends AbstractLevelSet {
 	private int currentChoice = 0; // keeps track of which action
 	
 	// buttons, options, directions, and rules
-	private String[] menuButtons = { "Start", "Leaderboard", "Directions", "Rules", "Options", "Quit"};
+	private String[] menuButtons = { "Start", "Leaderboard", "Directions", "Rules", "Options", "Quit" };
 	private String[] directionButtons = {
 			"Your country has been invaded by a neighboring country under the regime",
 			"of Mike. The year is 1982. As a pilot in the air force, it is your duty to protect",
@@ -49,6 +49,7 @@ public class Menu extends AbstractLevelSet {
 			"Best of luck soldier."
 			};
 	private String[] optionButtons = { "Toggle Mute", "Back", "Quit" };
+	private String tip = "*Use arrow keys to navigate and enter key to select";
 	
 	private int numberOptions; // length of current button list
 
@@ -139,7 +140,7 @@ public class Menu extends AbstractLevelSet {
 	private void menuScreen(Graphics2D g) {
 		for (int i = 0; i < menuButtons.length; i++) {
 			if (i == currentChoice) {
-				g.setColor(new Color(255, 204, 127));
+				g.setColor(Color.WHITE);
 			} else {
 				g.setColor(BRIGHTYELLOW);
 			}
@@ -203,6 +204,11 @@ public class Menu extends AbstractLevelSet {
 		g.setColor(titleColor);
 		g.setFont(titleFont);
 		g.drawString("Jet Madness", 100, 140);
+		
+		// draw tip
+		g.setColor(Color.LIGHT_GRAY);
+		g.setFont(new Font("Arial", Font.ITALIC, 13));
+		g.drawString(tip, 100, 440);
 		g.setFont(font);
 		
 		// draws which menu screen and the options and directions
