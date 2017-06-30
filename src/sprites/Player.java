@@ -10,6 +10,7 @@ import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 
+import gameRun.Menu;
 import mainclasses.Panel;
 
 import sprites.Bullet;
@@ -101,19 +102,17 @@ public class Player extends AbstractSpriteSet {
 		currentAction = IDLE;
 		animation.setFrames(playerEntities.get(IDLE));
 		animation.setDelay(50);
-		
+
 		try {
 			// sound effects
-			AudioInputStream ais1 = AudioSystem.getAudioInputStream(getClass()
-					.getResource("/music/bulletshot.wav"));
+			AudioInputStream ais1 = AudioSystem.getAudioInputStream(getClass().getResource("/music/bulletshot.wav"));
 			clipShoot = AudioSystem.getClip();
 			clipShoot.open(ais1);
-			AudioInputStream ais2 = AudioSystem.getAudioInputStream(getClass()
-					.getResource("/music/Triumph_Health_Sound.wav"));
+			AudioInputStream ais2 = AudioSystem
+					.getAudioInputStream(getClass().getResource("/music/Triumph_Health_Sound.wav"));
 			clipHealth = AudioSystem.getClip();
 			clipHealth.open(ais2);
-			AudioInputStream ais3 = AudioSystem.getAudioInputStream(getClass()
-					.getResource("/music/Crash_Sound.wav"));
+			AudioInputStream ais3 = AudioSystem.getAudioInputStream(getClass().getResource("/music/Crash_Sound.wav"));
 			clipCrash = AudioSystem.getClip();
 			clipCrash.open(ais3);
 		} catch (Exception e) {
@@ -254,6 +253,7 @@ public class Player extends AbstractSpriteSet {
 	public void checkGetLife(ArrayList<NewLife> nl) {
 		for (int i = 0; i < nl.size(); i++) {
 			if (intersects(nl.get(i))) {
+				if (Menu.isNotMuted)
 				sfx.get("health").start();
 				nl.remove(i);
 				lives++;
@@ -324,6 +324,7 @@ public class Player extends AbstractSpriteSet {
 		
 		// animation of dying happens once before restarting
 		if (currentAction == DIE) {
+			if (Menu.isNotMuted)
 			sfx.get("crash").start();
 			if (animation.hasPlayedOnce()) {
 				dying = false;
@@ -344,8 +345,13 @@ public class Player extends AbstractSpriteSet {
 		// add bullet if player is shooting
 		if (isShoot) {
 			if (currentAction != SHOOT) {
-				sfx.get("shoot").start();
-				sfx.get("shoot").loop(Clip.LOOP_CONTINUOUSLY);
+				if (Menu.isNotMuted) {
+					sfx.get("shoot").start();
+					sfx.get("shoot").loop(Clip.LOOP_CONTINUOUSLY);
+				} else {
+					sfx.get("shoot").stop();
+				}
+				
 				Bullet b = new Bullet(map, 0, -bulletSpeed, "/entities/bullet.gif");
 				b.setPosition(x, y);
 				bullet.add(b);
