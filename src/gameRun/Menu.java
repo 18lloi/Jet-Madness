@@ -125,7 +125,7 @@ public class Menu extends AbstractLevelSet {
 		// starts menu music
 		clip.start();
 	}
-
+	
 	// initializes numberOptions to the number of buttons in the MENU screen
 	public void init() {
 		numberOptions = menuButtons.length;
