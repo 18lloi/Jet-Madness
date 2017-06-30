@@ -139,6 +139,8 @@ public class Menu extends AbstractLevelSet {
 	// draws menu options
 	private void menuScreen(Graphics2D g) {
 		for (int i = 0; i < menuButtons.length; i++) {
+			g.setColor(Color.BLACK);
+			g.drawString(menuButtons[i], 123, 252 + i * 30);
 			if (i == currentChoice) {
 				g.setColor(Color.WHITE);
 			} else {
@@ -201,9 +203,12 @@ public class Menu extends AbstractLevelSet {
 		bg.draw(g);
 
 		// draw title
-		g.setColor(titleColor);
 		g.setFont(titleFont);
+		g.setColor(Color.BLACK);
+		g.drawString("Jet Madness", 105, 143);
+		g.setColor(titleColor);
 		g.drawString("Jet Madness", 100, 140);
+
 		
 		// draw tip
 		g.setColor(Color.LIGHT_GRAY);
@@ -253,6 +258,8 @@ public class Menu extends AbstractLevelSet {
 		
 		// draw loading
 		if (isSelected) {
+			g.setColor(Color.BLACK);
+			g.drawString("LOADING...", 403, 452);
 			g.setColor(Color.GREEN);
 			g.drawString("LOADING...", 400, 450);
 			no++;
